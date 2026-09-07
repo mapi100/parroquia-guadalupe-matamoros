@@ -1,1 +1,677 @@
+* {
+    box-sizing: border-box;
+}
 
+
+/* ========================================
+   GENERAL
+   ======================================== */
+
+body {
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    line-height: 1.65;
+
+    background-color: #ffd6e8;
+    color: #2b2b2b;
+}
+
+
+/* ========================================
+   HEADER
+   ======================================== */
+
+.parish-header {
+    background-color: #ffffff;
+
+    border-bottom: 4px solid #8b1e1e;
+
+    padding: 22px 20px;
+}
+
+
+.header-content {
+    width: 90%;
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 170px 1fr 170px;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+
+.header-space {
+    width: 170px;
+}
+
+
+.header-text {
+    text-align: center;
+}
+
+
+header h1 {
+    margin: 6px 0;
+
+    font-size: 42px;
+    line-height: 1.15;
+    font-weight: 700;
+
+    color: #8b1e1e;
+}
+
+
+header h2 {
+    margin: 5px 0;
+
+    font-size: 25px;
+    line-height: 1.3;
+    font-weight: 700;
+
+    color: #2f4f88;
+}
+
+
+.header-virgin {
+    width: 190px;
+    height: 240px;
+
+    object-fit: contain;
+
+    justify-self: center;
+}
+
+
+/* ========================================
+   CONTENEDOR PRINCIPAL
+   ======================================== */
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+
+    margin: auto;
+}
+
+
+/* ========================================
+   SECCIONES GENERALES
+   ======================================== */
+
+section {
+    position: relative;
+
+    background-color: #ffffff;
+
+    margin: 30px auto;
+    padding: 38px 42px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+
+section > * {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+section h2 {
+    margin-top: 0;
+    margin-bottom: 26px;
+
+    text-align: center;
+
+    font-size: 33px;
+    line-height: 1.2;
+    font-weight: 700;
+
+    color: #8b1e1e;
+}
+
+
+/* ========================================
+   ROSAS
+   ======================================== */
+
+.with-roses {
+    overflow: visible;
+}
+
+
+.with-roses::before,
+.with-roses::after {
+    content: "";
+
+    position: absolute;
+
+    width: 160px;
+    height: 160px;
+
+    background-image: url("images/rosa.png");
+    background-size: 150% 150%;
+    background-position: top left;
+    background-repeat: no-repeat;
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+
+.with-roses::before {
+    top: -34px;
+    left: -34px;
+}
+
+
+.with-roses::after {
+    right: -34px;
+    bottom: -34px;
+
+    transform: rotate(180deg);
+}
+
+
+/* Rosas de Confesiones y Adoración */
+
+.small-roses::before,
+.small-roses::after {
+    width: 135px;
+    height: 135px;
+}
+
+
+.small-roses::before {
+    top: -28px;
+    left: -28px;
+}
+
+
+.small-roses::after {
+    right: -28px;
+    bottom: -28px;
+}
+
+
+/* ========================================
+   HORARIOS DE MISA
+   ======================================== */
+
+.mass-section {
+    padding: 44px 42px 36px;
+}
+
+
+.mass-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+
+.mass-card {
+    background-color: #eef4fb;
+
+    border-left: 5px solid #2f4f88;
+
+    padding: 25px;
+
+    text-align: center;
+}
+
+
+.mass-card h3 {
+    margin-top: 0;
+    margin-bottom: 22px;
+
+    font-size: 23px;
+    line-height: 1.3;
+    font-weight: 700;
+
+    color: #2f4f88;
+}
+
+
+.mass-day {
+    margin-bottom: 16px;
+}
+
+
+.mass-day strong {
+    display: block;
+
+    margin-bottom: 2px;
+
+    font-size: 19px;
+    line-height: 1.3;
+    font-weight: 700;
+
+    color: #8b1e1e;
+}
+
+
+.mass-day span {
+    display: block;
+
+    font-size: 18px;
+    line-height: 1.45;
+}
+
+
+.sunday-masses span {
+    margin-bottom: 5px;
+}
+
+
+/* ========================================
+   INFORMACIÓN GENERAL
+   ======================================== */
+
+.info {
+    text-align: center;
+
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+.info p {
+    margin: 14px 0;
+}
+
+
+.info strong {
+    font-weight: 700;
+}
+
+
+/* ========================================
+   CONFESIONES Y ADORACIÓN
+   ======================================== */
+
+.sacrament-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+
+    margin: 30px auto;
+}
+
+
+.sacrament-grid section {
+    height: 100%;
+
+    margin: 0;
+}
+
+
+/* ========================================
+   CLERO
+   ======================================== */
+
+.clergy-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.clergy-card {
+    background-color: #fff8fb;
+
+    border-top: 5px solid #8b1e1e;
+    border-radius: 6px;
+
+    padding: 25px 20px;
+
+    text-align: center;
+}
+
+
+.clergy-card h3 {
+    margin-top: 0;
+    margin-bottom: 14px;
+
+    font-size: 23px;
+    line-height: 1.3;
+    font-weight: 700;
+
+    color: #2f4f88;
+}
+
+
+.clergy-card p {
+    margin: 8px 0;
+
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+
+.clergy-card strong {
+    font-weight: 700;
+
+    color: #8b1e1e;
+}
+
+
+/* ========================================
+   SECCIÓN DE INFORMACIÓN
+   ======================================== */
+
+.information-section {
+    padding: 35px 50px;
+}
+
+
+.information-layout {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1.15fr 1fr;
+
+    align-items: stretch;
+
+    gap: 45px;
+}
+
+
+/* TEXTO */
+
+.information-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    text-align: left;
+
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+.information-text h2 {
+    margin: 0 0 26px 0;
+
+    text-align: left;
+
+    font-size: 33px;
+    line-height: 1.2;
+    font-weight: 700;
+
+    color: #8b1e1e;
+}
+
+
+.information-text p {
+    margin: 16px 0;
+}
+
+
+.information-text strong {
+    font-size: 19px;
+    font-weight: 700;
+
+    color: #8b1e1e;
+}
+
+
+/* FOTO DE LA PARROQUIA */
+
+.information-image {
+    display: flex;
+    align-self: stretch;
+    justify-content: center;
+}
+
+.information-image img {
+    width: 100%;
+    height: 100%;
+
+    min-height: 330px;
+
+    object-fit: cover;
+    object-position: center top;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 4px 14px rgba(0, 0, 0, 0.16);
+
+    display: block;
+}
+
+
+/* ========================================
+   LINKS
+   ======================================== */
+
+a {
+    color: #2f4f88;
+
+    font-size: 17px;
+}
+
+
+a:hover {
+    color: #8b1e1e;
+}
+
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+footer {
+    margin-top: 40px;
+
+    padding: 25px 15px;
+
+    background-color: #8b1e1e;
+    color: #ffffff;
+
+    text-align: center;
+
+    font-size: 16px;
+    line-height: 1.55;
+}
+
+
+footer p {
+    margin: 8px 0;
+}
+
+
+/* ========================================
+   CELULAR
+   ======================================== */
+
+@media (max-width: 700px) {
+
+    body {
+        font-size: 17px;
+    }
+
+
+    /* HEADER */
+
+    .parish-header {
+        padding: 18px 10px;
+    }
+
+
+    .header-content {
+        width: 100%;
+
+        grid-template-columns: 65px 1fr 65px;
+
+        gap: 6px;
+    }
+
+
+    .header-space {
+        width: 65px;
+    }
+
+
+    .header-virgin {
+        width: 100px;
+        height: 150px;
+    }
+
+
+    .header-text h1 {
+        font-size: 25px;
+
+        line-height: 1.15;
+    }
+
+
+    .header-text h2 {
+        font-size: 17px;
+    }
+
+
+    /* SECCIONES */
+
+    section {
+        padding: 32px 24px;
+    }
+
+
+    section h2 {
+        font-size: 29px;
+    }
+
+
+    /* COLUMNAS */
+
+    .mass-grid,
+    .sacrament-grid,
+    .clergy-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* MISAS */
+
+    .mass-card h3,
+    .clergy-card h3 {
+        font-size: 22px;
+    }
+
+
+    .mass-day strong {
+        font-size: 18px;
+    }
+
+
+    .mass-day span,
+    .info,
+    .clergy-card p {
+        font-size: 17px;
+    }
+
+
+    /* ROSAS */
+
+    .with-roses::before,
+    .with-roses::after {
+        width: 95px;
+        height: 95px;
+    }
+
+
+    .with-roses::before {
+        top: -14px;
+        left: -14px;
+    }
+
+
+    .with-roses::after {
+        right: -14px;
+        bottom: -14px;
+    }
+
+
+    .small-roses::before,
+    .small-roses::after {
+        width: 88px;
+        height: 88px;
+    }
+
+
+    /* INFORMACIÓN */
+
+    .information-section {
+        padding: 30px 24px;
+    }
+
+
+    .information-layout {
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: 1.15fr 1fr;
+
+        align-items: stretch;
+
+        gap: 45px;
+    }
+
+
+    .information-text {
+        text-align: center;
+
+        font-size: 17px;
+    }
+
+
+    .information-text h2 {
+        text-align: center;
+
+        font-size: 29px;
+    }
+
+
+    .information-text strong {
+        font-size: 18px;
+    }
+
+
+    .information-image img {
+        width: 100%;
+        height: 320px;
+
+        border-radius: 15px;
+    }
+
+
+    /* LINKS */
+
+    a {
+        font-size: 16px;
+
+        overflow-wrap: anywhere;
+    }
+
+}
