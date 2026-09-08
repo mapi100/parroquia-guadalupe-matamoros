@@ -442,6 +442,7 @@ section h2 {
     justify-content: center;
 }
 
+
 .information-image img {
     width: 100%;
     height: 100%;
@@ -506,88 +507,175 @@ footer p {
 
 @media (max-width: 700px) {
 
+    /* GENERAL */
+
     body {
-        font-size: 17px;
+        font-size: 18px;
+        line-height: 1.6;
+    }
+
+
+    .container {
+        width: 94%;
     }
 
 
     /* HEADER */
 
-    .parish-header {
-        padding: 18px 10px;
-    }
+/* HEADER */
 
+    .parish-header {
+        padding: 20px 14px;
+    }
 
     .header-content {
         width: 100%;
 
-        grid-template-columns: 65px 1fr 65px;
+        display: grid;
+        grid-template-columns: 1fr 95px;
 
-        gap: 6px;
+        align-items: center;
+
+        gap: 12px;
     }
-
 
     .header-space {
-        width: 65px;
+        display: none;
     }
 
+    .header-text {
+        text-align: left;
+    }
+
+    .header-text h1 {
+        margin: 7px 0;
+
+        font-size: 28px;
+        line-height: 1.12;
+    }
+
+    .header-text h2 {
+        margin: 5px 0;
+
+        font-size: 18px;
+        line-height: 1.25;
+    }
 
     .header-virgin {
-        width: 100px;
-        height: 150px;
+        width: 140px;
+        height: 165px;
+
+        object-fit: contain;
+
+        justify-self: end;
     }
 
 
     .header-text h1 {
-        font-size: 25px;
-
-        line-height: 1.15;
+        font-size: 29px;
+        line-height: 1.12;
     }
 
 
     .header-text h2 {
-        font-size: 17px;
+        font-size: 19px;
+        line-height: 1.25;
     }
 
 
     /* SECCIONES */
 
     section {
-        padding: 32px 24px;
+        margin: 22px auto;
+        padding: 32px 20px;
     }
 
 
     section h2 {
+        margin-bottom: 24px;
+
         font-size: 29px;
+        line-height: 1.15;
     }
 
 
-    /* COLUMNAS */
+    /* HORARIOS DE MISA */
 
-    .mass-grid,
-    .sacrament-grid,
-    .clergy-grid {
+    .mass-section {
+        padding: 36px 18px 28px;
+    }
+
+
+    .mass-grid {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+
+    .mass-card {
+        padding: 24px 18px;
+    }
+
+
+    .mass-card h3 {
+        font-size: 23px;
+    }
+
+
+    .mass-day {
+        margin-bottom: 18px;
+    }
+
+
+    .mass-day strong {
+        font-size: 19px;
+    }
+
+
+    .mass-day span {
+        font-size: 18px;
+    }
+
+
+    /* CONFESIONES Y ADORACIÓN */
+
+    .sacrament-grid {
         grid-template-columns: 1fr;
     }
 
 
-    /* MISAS */
+    .info {
+        font-size: 18px;
+    }
 
-    .mass-card h3,
+
+    .info p {
+        margin: 15px 0;
+    }
+
+
+    /* CLERO */
+
+    .clergy-grid {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+
+    .clergy-card {
+        padding: 24px 18px;
+    }
+
+
     .clergy-card h3 {
         font-size: 22px;
     }
 
 
-    .mass-day strong {
-        font-size: 18px;
-    }
-
-
-    .mass-day span,
-    .info,
     .clergy-card p {
-        font-size: 17px;
+        font-size: 18px;
     }
 
 
@@ -595,34 +683,34 @@ footer p {
 
     .with-roses::before,
     .with-roses::after {
-        width: 95px;
-        height: 95px;
+        width: 88px;
+        height: 88px;
     }
 
 
     .with-roses::before {
-        top: -14px;
-        left: -14px;
+        top: -12px;
+        left: -12px;
     }
 
 
     .with-roses::after {
-        right: -14px;
-        bottom: -14px;
+        right: -12px;
+        bottom: -12px;
     }
 
 
     .small-roses::before,
     .small-roses::after {
-        width: 88px;
-        height: 88px;
+        width: 80px;
+        height: 80px;
     }
 
 
     /* INFORMACIÓN */
 
     .information-section {
-        padding: 30px 24px;
+        padding: 30px 20px;
     }
 
 
@@ -631,36 +719,55 @@ footer p {
 
         display: grid;
 
-        grid-template-columns: 1.15fr 1fr;
+        grid-template-columns: 1fr;
 
         align-items: stretch;
 
-        gap: 45px;
+        gap: 28px;
     }
 
 
     .information-text {
         text-align: center;
 
-        font-size: 17px;
+        font-size: 18px;
     }
 
 
     .information-text h2 {
+        margin-bottom: 22px;
+
         text-align: center;
 
         font-size: 29px;
     }
 
 
+    .information-text p {
+        margin: 15px 0;
+    }
+
+
     .information-text strong {
-        font-size: 18px;
+        font-size: 19px;
+    }
+
+
+    .information-image {
+        width: 100%;
     }
 
 
     .information-image img {
         width: 100%;
-        height: 320px;
+        height: auto;
+        min-height: 0;
+        max-height: none;
+
+        aspect-ratio: 4 / 5;
+
+        object-fit: cover;
+        object-position: center top;
 
         border-radius: 15px;
     }
@@ -669,9 +776,21 @@ footer p {
     /* LINKS */
 
     a {
-        font-size: 16px;
+        font-size: 17px;
 
         overflow-wrap: anywhere;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        margin-top: 30px;
+
+        padding: 24px 18px;
+
+        font-size: 15px;
+        line-height: 1.55;
     }
 
 }
